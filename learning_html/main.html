@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>restaurant website</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+  }
+
+  /* Header styles */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+
+
+  .contact-info {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    font-size: 1.2rem;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  @media (max-width: 768px) {
+    nav ul {
+      padding: 0;
+    }
+
+    nav ul li {
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    .main-text {
+      padding: 1rem;
+    }
+  }
+  .reservation{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .front-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    font-family: Algerian;
+  }
+  @keyframes animation {
+    from {
+      letter-spacing: 32px;
+    }
+    to {
+      letter-spacing: 0;
+    }
+  }
+
+  .animated {
+    animation: animation 5s ease infinite;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>
+<body class="body">
+<header class="container">
+  <nav>
+    <ul>
+      <li><a href="main.html">Home</a></li>
+      <li><a href="restaurant.html">Unser Restaurant</a></li>
+      <li><a href="Bar-lounge.html">Unsere Bar und Lounge</a></li>
+      <li><a href="Events.html">Unsere Events</a></li>
+      <li><a href="Anlasss.html">Ihr Anlass</a></li>
+      <li><a href="kennenlernen.html">Kennenlernen</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="main-text">
+    <img class="img" src="restaurant.jpg" alt="Restaurant Zug">
+    <section class="content">
+      <div class="animated">
+      <h1 class="front-page">Herzlich willkommen im aigu</h1>
+      </div>
+      <p>Welcome to our restaurnat chaine we are happy to welcome you to our website</p>
+      <button class="reservation" type="button" onclick="alert('reservation booked')">reserve a restaurant</button>
+    </section>
+  </div>
+</main>
+<footer class="contact-info">
+  <p type="button"><a href="email.html">something.something@gmail.com</a></p>
+  <p class="phone-number" type="button"><a href="phonenumber.html">phone number: 079 381 07 74</a></p>
+</footer>
+</body>
+</html>
