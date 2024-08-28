@@ -139,6 +139,29 @@
     text-transform: uppercase;
     white-space: nowrap;
   }
+  .-fixed {
+    table-layout: fixed;
+  }
+
+  table {
+    text-align: left;
+    width: 400px;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .content {
+    margin: 0 auto;
+    width: 400px;
+    padding: 0 24px 24px;
+  }
+
+  html, body {
+    height: auto;
+    font-size: 14px;
+  }
 </style>
 <body class="body">
 <header class="container">
@@ -161,6 +184,32 @@
       <h1 class="front-page">Herzlich willkommen im aigu</h1>
       </div>
       <p>Welcome to our restaurnat chaine we are happy to welcome you to our website</p>
+      <div class="content">
+        <h2>fixed</h2>
+        <table class="-fixed">
+          <thead>
+          <th>Name</th>
+          <th>City</th>
+          <th>Phone</th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Gregory</td>
+            <td>New York</td>
+            <td>918-745-9652</td>
+          </tr>
+          <tr>
+            <td>Daniel</td>
+            <td>San Francisco</td>
+            <td>585-365-9088</td>
+          </tr>
+          <tr>
+            <td>Megan</td>
+            <td>London</td>
+            <td>925-277-4296</td>
+          </tr>
+          </tbody>
+        </table>
       <button class="reservation" type="button" onclick="alert('reservation booked')">reserve a restaurant</button>
     </section>
   </div>
