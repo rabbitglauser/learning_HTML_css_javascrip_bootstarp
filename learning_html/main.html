@@ -63,10 +63,6 @@
     border-radius: 50px;
   }
 
-  .content {
-    text-align: center;
-  }
-
   h1 {
     color: #333;
     margin-bottom: 1rem;
@@ -139,9 +135,6 @@
     text-transform: uppercase;
     white-space: nowrap;
   }
-  .-fixed {
-    table-layout: fixed;
-  }
 
   table {
     text-align: left;
@@ -152,16 +145,62 @@
     margin-bottom: 0;
   }
 
-  .content {
-    margin: 0 auto;
-    width: 400px;
-    padding: 0 24px 24px;
-  }
-
   html, body {
     height: auto;
     font-size: 14px;
   }
+
+  body {
+    margin:0;
+  }
+
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index: -100;
+  }
+
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+
+  .bg3 {
+    animation-duration:5s;
+  }
+
+  .content {
+    padding: 10vmin;
+    text-align: center;
+  }
+
+  h1 {
+    font-family:monospace;
+  }
+
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  .phone-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222222;
+  }
+
 </style>
 <body class="body">
 <header class="container">
@@ -176,47 +215,28 @@
     </ul>
   </nav>
 </header>
+
+<section>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+</section>
+
 <main>
   <div class="main-text">
     <img class="img" src="restaurant.jpg" alt="Restaurant Zug">
     <section class="content">
       <div class="animated">
-      <h1 class="front-page">Herzlich willkommen im aigu</h1>
+      <h1 class="front-page">Wilkommen bei samuel restaurant</h1>
       </div>
       <p>Welcome to our restaurnat chaine we are happy to welcome you to our website</p>
-      <div class="content">
-        <h2>fixed</h2>
-        <table class="-fixed">
-          <thead>
-          <th>Name</th>
-          <th>City</th>
-          <th>Phone</th>
-          </thead>
-          <tbody>
-          <tr>
-            <td>Gregory</td>
-            <td>New York</td>
-            <td>918-745-9652</td>
-          </tr>
-          <tr>
-            <td>Daniel</td>
-            <td>San Francisco</td>
-            <td>585-365-9088</td>
-          </tr>
-          <tr>
-            <td>Megan</td>
-            <td>London</td>
-            <td>925-277-4296</td>
-          </tr>
-          </tbody>
-        </table>
       <button class="reservation" type="button" onclick="alert('reservation booked')">reserve a restaurant</button>
     </section>
   </div>
 </main>
 <footer class="contact-info">
-  <p type="button"><a href="email.html">something.something@gmail.com</a></p>
-  <p class="phone-number" type="button"><a href="phonenumber.html">phone number: 079 381 07 74</a></p>
+  <p style="color: black;" type="button"><a href="email.html">something.something@gmail.com</a></p>
+  <p class="phone"style="color: black;" type="button"><a href="phonenumber.html">phone number: 079 381 07 74</a></p>
 </footer>
 </body>
 </html>

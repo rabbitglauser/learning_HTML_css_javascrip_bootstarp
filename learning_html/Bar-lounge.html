@@ -1,162 +1,205 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsere Bar und Lounge</title>
   <style>
-    :root {
-      --background-color-body: darkorange;
-      --text-color-h1: darkblue;
-      --background-color-flex-container: chartreuse;
-      --background-color-flex-item: yellow;
-    }
-
-    .body {
-      background-color: var(--background-color-body);
-    }
-
-    .header {
-      text-align: center;
-      color: var(--text-color-h1);
-    }
-
-    .flex-container {
-      display: flex;
-      height: 200px;
-      align-items: baseline;
-      background-color: var(--background-color-flex-container);
-       border-radius: 30px;
-    }
-
-    .flex-item {
-      background-color: var(--background-color-flex-item);
-      width: 100px;
-      margin: 10px;
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-      flex-grow: 10;
-      border-radius: 20px;
-    }
-
-    @media (max-width: 800px) {
-      .flex-container, .flex-item {
-        flex: 100%;
-      }
-    }
-    * {
-      box-sizing: border-box;
-    }
-
+    /* General styles */
     body {
+      background-color: #f4f4f9;
+      color: #333;
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      font-family: Arial;
+      padding: 0;
+      line-height: 1.6;
     }
 
-    .header {
+    /* Header styles */
+    header {
+      background: #343a40;
+      color: #fff;
+      padding: 1rem 0;
       text-align: center;
-      padding: 32px;
     }
 
-    .row {
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107; /* Lighter gold on hover */
+    }
+
+    /* Main content styles */
+    .main-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero-section {
+      background-image: url('homepage.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 2rem;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .bar-lounge-section {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 4px;
+      justify-content: space-around;
+      margin: 3rem 0;
+      gap: 1.5rem;
     }
 
-    .column {
-      flex: 25%;
-      max-width: 25%;
-      padding: 0 4px;
+    .bar-lounge-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      flex: 1 1 300px;
+      max-width: 45%;
     }
 
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
+    .bar-lounge-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
-    @media (max-width: 800px) {
-      .column {
-        flex: 50%;
-        max-width: 50%;
-      }
+    .bar-lounge-info {
+      padding: 1rem;
     }
 
-    .image-swiss-mountain{
-      border-radius: 30px;
+    .bar-lounge-info h2 {
+      color: #343a40;
+      margin: 0 0 0.5rem;
     }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      background-color: #2196F3;
-      padding: 10px;
-      grid-gap: 10px;
-      grid-row-start: 4;
+    .bar-lounge-info p {
+      color: #555;
+      font-size: 1rem;
     }
-    .grid-item {
-      background-color: yellow;
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      font-size: 30px;
-      grid-template-columns: 80px 200px auto 40px;
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #343a40;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #23272b; /* Darker shade on hover */
+    }
+
+    /* Footer */
+    footer {
+      background: #343a40;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
     }
   </style>
 </head>
-<body class="body">
-<h1 class="header">Learning Flexbox</h1>
-<main>
-  <slot name="my dives"></slot>
-  <div class="flex-container">
-    <div class="flex-item" button onclick="showContent()"><h1>1</h1></div>
-    <div class="flex-item"><h6>2</h6></div>
-    <div class="flex-item"><h3>3</h3></div>
-    <div class="flex-item"><small>4</small></div>
-  </div>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="main.html">Home</a></li>
+      <li><a href="restaurant.html">Unser Restaurant</a></li>
+      <li><a href="Bar-lounge.html">Unsere Bar und Lounge</a></li>
+      <li><a href="Events.html">Unsere Events</a></li>
+      <li><a href="Anlasss.html">Ihr Anlass</a></li>
+      <li><a href="kennenlernen.html">Kennenlernen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <h1>Unsere Bar und Lounge</h1>
+  <p>Genießen Sie unsere stilvollen Bars und Lounges – perfekt für einen entspannenden Abend oder gesellige Stunden.</p>
+</section>
+
+<main class="main-content">
+  <section class="bar-lounge-section">
+    <!-- Bar/Lounge 1 -->
+    <div class="bar-lounge-item">
+      <img src="homepagebar.jpg" alt="Cocktail Bar">
+      <div class="bar-lounge-info">
+        <h2>Unsere Cocktail-Bar</h2>
+        <p>Unsere Cocktail-Bar bietet eine breite Auswahl an kreativen Cocktails und klassischen Getränken, zubereitet von unseren erfahrenen Barkeepern.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Bar/Lounge 2 -->
+    <div class="bar-lounge-item">
+      <img src="lounge.webp" alt="Lounge Area">
+      <div class="bar-lounge-info">
+        <h2>Elegante Lounge</h2>
+        <p>Unsere Lounge bietet eine entspannte Atmosphäre mit komfortablen Sitzgelegenheiten und stilvollem Design – der ideale Ort, um den Abend ausklingen zu lassen.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Bar/Lounge 3 -->
+    <div class="bar-lounge-item">
+      <img src="vip%20lounge.jpg" alt="VIP Lounge">
+      <div class="bar-lounge-info">
+        <h2>VIP Lounge</h2>
+        <p>Erleben Sie exklusiven Komfort in unserer VIP Lounge, perfekt für besondere Anlässe und private Feiern mit einem erstklassigen Service.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Bar/Lounge 4 -->
+    <div class="bar-lounge-item">
+      <img src="outdoor%20bar.webp" alt="Outdoor Bar">
+      <div class="bar-lounge-info">
+        <h2>Outdoor Bar</h2>
+        <p>Unsere Outdoor Bar bietet ein einzigartiges Ambiente im Freien, ideal für sonnige Tage und laue Abende unter den Sternen.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-
-<div class="container mt-3">
-  <h2>Colored Spinners</h2>
-
-  <div class="spinner-border text-muted"></div>
-  <div class="spinner-border text-primary"></div>
-  <div class="spinner-border text-success"></div>
-  <div class="spinner-border text-info"></div>
-  <div class="spinner-border text-warning"></div>
-  <div class="spinner-border text-danger"></div>
-  <div class="spinner-border text-secondary"></div>
-  <div class="spinner-border text-dark"></div>
-  <div class="spinner-border text-light"></div>
-</div>
-
-<div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <slot name="image gallery"></slot>
-    <img class="image-swiss-mountain" src="download.jpg" alt="random image">
-    <img class="image-swiss-mountain" src="icon.png" alt="random image">
-  </div>
-</div>
-
-<template>
-  <h2>Star</h2>
-  <img src="icon.png" width="214" height="204">
-</template>
-
-<script>
-  function showContent() {
-    let temp = document.getElementsByTagName("template")[0];
-    let clon = temp.content.cloneNode(true);
-    document.body.appendChild(clon);
-  }
-</script>
+<footer>
+  <p>&copy; 2024 Restaurant Guide. Alle Rechte vorbehalten.</p>
+</footer>
 </body>
 </html>
+

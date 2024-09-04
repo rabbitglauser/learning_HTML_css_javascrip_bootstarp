@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ihr Anlass</title>
+  <style>
+    /* General styles */
+    body {
+      background-color: #fafafa;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styles */
+    header {
+      background: #444;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700; /* Gold color on hover */
+    }
+
+    /* Main content styles */
+    .main-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .anlass-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding: 0;
+    }
+
+    .anlass-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .anlass-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .anlass-info {
+      padding: 1rem;
+    }
+
+    .anlass-info h3 {
+      margin: 0 0 0.5rem;
+      color: #333;
+    }
+
+    .anlass-info p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="main.html">Home</a></li>
+      <li><a href="restaurant.html">Unser Restaurant</a></li>
+      <li><a href="Bar-lounge.html">Unsere Bar und Lounge</a></li>
+      <li><a href="Events.html">Unsere Events</a></li>
+      <li><a href="Anlasss.html">Ihr Anlass</a></li>
+      <li><a href="kennenlernen.html">Kennenlernen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <h1>Ihr Anlass bei uns</h1>
+  <p>Feiern Sie Ihre besonderen Momente in einem einzigartigen Ambiente. Egal ob Hochzeit, Geburtstag, Firmenfeier oder private Veranstaltung – wir machen Ihren Anlass unvergesslich!</p>
+
+  <div class="anlass-list">
+    <!-- Event Option 1 -->
+    <div class="anlass-item">
+      <img src="hochzeit.jpg" alt="Hochzeiten">
+      <div class="anlass-info">
+        <h3>Hochzeiten</h3>
+        <p>Erleben Sie Ihre Traumhochzeit in unserem stilvollen Ambiente mit maßgeschneiderten Menüs und erstklassigem Service.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Event Option 2 -->
+    <div class="anlass-item">
+      <img src="geburstagParty.jpg" alt="Geburtstagsparty">
+      <div class="anlass-info">
+        <h3>Geburtstagsparty</h3>
+        <p>Feiern Sie Ihren Geburtstag mit Familie und Freunden bei einem köstlichen Essen und einer entspannten Atmosphäre.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Event Option 3 -->
+    <div class="anlass-item">
+      <img src="veralstanltungen.jpg" alt="Firmenveranstaltungen">
+      <div class="anlass-info">
+        <h3>Firmenveranstaltungen</h3>
+        <p>Beeindrucken Sie Ihre Kollegen und Geschäftspartner mit einem eleganten Event, das perfekt organisiert ist.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <!-- Event Option 4 -->
+    <div class="anlass-item">
+      <img src="privateparty.jpg" alt="Private Feiern">
+      <div class="anlass-info">
+        <h3>Private Feiern</h3>
+        <p>Ob Jubiläum, Familienfeier oder andere private Anlässe – wir bieten Ihnen die perfekte Location für Ihre Feier.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024 Restaurant Guide. Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>
